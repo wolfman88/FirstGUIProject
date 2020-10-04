@@ -70,30 +70,36 @@
       this.label20 = new System.Windows.Forms.Label();
       this.label21 = new System.Windows.Forms.Label();
       this.Password = new System.Windows.Forms.TextBox();
+      this.FindEmployeeByID = new System.Windows.Forms.Button();
+      this.FindEmployeeByLastName = new System.Windows.Forms.Button();
+      this.FindEmployeeByFirstName = new System.Windows.Forms.Button();
+      this.Cancel = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // ID
       // 
       this.ID.BackColor = System.Drawing.SystemColors.Info;
+      this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.ID.ForeColor = System.Drawing.SystemColors.MenuText;
-      this.ID.Location = new System.Drawing.Point(12, 30);
+      this.ID.Location = new System.Drawing.Point(28, 30);
       this.ID.Mask = "000000";
       this.ID.Name = "ID";
-      this.ID.Size = new System.Drawing.Size(100, 20);
+      this.ID.Size = new System.Drawing.Size(61, 26);
       this.ID.TabIndex = 1;
-      this.ID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+      this.ID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ID_MouseClick);
+      this.ID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ID_KeyDown);
       // 
       // label1
       // 
+      this.label1.AllowDrop = true;
       this.label1.AutoSize = true;
       this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label1.Location = new System.Drawing.Point(12, 12);
+      this.label1.Location = new System.Drawing.Point(28, 12);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(80, 15);
       this.label1.TabIndex = 2;
       this.label1.Text = "Employee ID";
-      this.label1.Click += new System.EventHandler(this.label1_Click);
       // 
       // NamePrefix
       // 
@@ -103,7 +109,6 @@
       this.NamePrefix.ReadOnly = true;
       this.NamePrefix.Size = new System.Drawing.Size(45, 20);
       this.NamePrefix.TabIndex = 3;
-      this.NamePrefix.TextChanged += new System.EventHandler(this.NamePrefix_TextChanged);
       // 
       // label2
       // 
@@ -121,9 +126,10 @@
       this.FirstName.BackColor = System.Drawing.SystemColors.Info;
       this.FirstName.Location = new System.Drawing.Point(99, 77);
       this.FirstName.Name = "FirstName";
-      this.FirstName.ReadOnly = true;
       this.FirstName.Size = new System.Drawing.Size(100, 20);
       this.FirstName.TabIndex = 5;
+      this.FirstName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FirstName_MouseClick);
+      this.FirstName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FirstName_KeyDown);
       // 
       // MiddleInitial
       // 
@@ -134,15 +140,17 @@
       this.MiddleInitial.ReadOnly = true;
       this.MiddleInitial.Size = new System.Drawing.Size(27, 20);
       this.MiddleInitial.TabIndex = 6;
+      this.MiddleInitial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // LastName
       // 
       this.LastName.BackColor = System.Drawing.SystemColors.Info;
       this.LastName.Location = new System.Drawing.Point(258, 77);
       this.LastName.Name = "LastName";
-      this.LastName.ReadOnly = true;
       this.LastName.Size = new System.Drawing.Size(100, 20);
       this.LastName.TabIndex = 7;
+      this.LastName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LastName_MouseClick);
+      this.LastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LastName_KeyDown);
       // 
       // label3
       // 
@@ -154,7 +162,6 @@
       this.label3.Size = new System.Drawing.Size(73, 15);
       this.label3.TabIndex = 8;
       this.label3.Text = "First Name:";
-      this.label3.Click += new System.EventHandler(this.label3_Click);
       // 
       // label4
       // 
@@ -181,11 +188,12 @@
       // Gender
       // 
       this.Gender.BackColor = System.Drawing.SystemColors.Info;
-      this.Gender.Location = new System.Drawing.Point(380, 77);
+      this.Gender.Location = new System.Drawing.Point(395, 77);
       this.Gender.Name = "Gender";
       this.Gender.ReadOnly = true;
-      this.Gender.Size = new System.Drawing.Size(54, 20);
+      this.Gender.Size = new System.Drawing.Size(24, 20);
       this.Gender.TabIndex = 11;
+      this.Gender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // label6
       // 
@@ -219,7 +227,6 @@
       this.label7.Size = new System.Drawing.Size(142, 15);
       this.label7.TabIndex = 14;
       this.label7.Text = "Date Last Drug Tested:";
-      this.label7.Click += new System.EventHandler(this.label7_Click);
       // 
       // EMail
       // 
@@ -227,7 +234,7 @@
       this.EMail.Location = new System.Drawing.Point(28, 133);
       this.EMail.Name = "EMail";
       this.EMail.ReadOnly = true;
-      this.EMail.Size = new System.Drawing.Size(144, 20);
+      this.EMail.Size = new System.Drawing.Size(193, 20);
       this.EMail.TabIndex = 15;
       // 
       // DateOfBirth
@@ -253,7 +260,7 @@
       // PreviousSalary
       // 
       this.PreviousSalary.BackColor = System.Drawing.SystemColors.Info;
-      this.PreviousSalary.Location = new System.Drawing.Point(610, 395);
+      this.PreviousSalary.Location = new System.Drawing.Point(610, 344);
       this.PreviousSalary.Name = "PreviousSalary";
       this.PreviousSalary.ReadOnly = true;
       this.PreviousSalary.Size = new System.Drawing.Size(100, 20);
@@ -262,7 +269,7 @@
       // LastPayHike
       // 
       this.LastPayHike.BackColor = System.Drawing.SystemColors.Info;
-      this.LastPayHike.Location = new System.Drawing.Point(610, 344);
+      this.LastPayHike.Location = new System.Drawing.Point(610, 293);
       this.LastPayHike.Name = "LastPayHike";
       this.LastPayHike.ReadOnly = true;
       this.LastPayHike.Size = new System.Drawing.Size(100, 20);
@@ -271,7 +278,7 @@
       // Salary
       // 
       this.Salary.BackColor = System.Drawing.SystemColors.Info;
-      this.Salary.Location = new System.Drawing.Point(610, 294);
+      this.Salary.Location = new System.Drawing.Point(610, 243);
       this.Salary.Name = "Salary";
       this.Salary.ReadOnly = true;
       this.Salary.Size = new System.Drawing.Size(100, 20);
@@ -291,10 +298,11 @@
       // UserName
       // 
       this.UserName.BackColor = System.Drawing.SystemColors.Info;
-      this.UserName.Location = new System.Drawing.Point(142, 294);
+      this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.UserName.Location = new System.Drawing.Point(28, 273);
       this.UserName.Name = "UserName";
       this.UserName.ReadOnly = true;
-      this.UserName.Size = new System.Drawing.Size(100, 20);
+      this.UserName.Size = new System.Drawing.Size(229, 26);
       this.UserName.TabIndex = 22;
       // 
       // ZipCode
@@ -385,7 +393,7 @@
       this.label12.AutoSize = true;
       this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label12.Location = new System.Drawing.Point(142, 276);
+      this.label12.Location = new System.Drawing.Point(28, 255);
       this.label12.Name = "label12";
       this.label12.Size = new System.Drawing.Size(69, 15);
       this.label12.TabIndex = 31;
@@ -405,10 +413,11 @@
       // label14
       // 
       this.label14.AutoSize = true;
-      this.label14.BackColor = System.Drawing.SystemColors.Info;
+      this.label14.BackColor = System.Drawing.SystemColors.AppWorkspace;
       this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+      this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label14.Location = new System.Drawing.Point(610, 276);
+      this.label14.Location = new System.Drawing.Point(610, 225);
       this.label14.Name = "label14";
       this.label14.Size = new System.Drawing.Size(48, 15);
       this.label14.TabIndex = 33;
@@ -417,10 +426,10 @@
       // label15
       // 
       this.label15.AutoSize = true;
-      this.label15.BackColor = System.Drawing.SystemColors.Info;
+      this.label15.BackColor = System.Drawing.SystemColors.AppWorkspace;
       this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label15.Location = new System.Drawing.Point(610, 326);
+      this.label15.Location = new System.Drawing.Point(610, 275);
       this.label15.Name = "label15";
       this.label15.Size = new System.Drawing.Size(92, 15);
       this.label15.TabIndex = 34;
@@ -477,28 +486,27 @@
       this.SSN.Mask = "000-00-0000";
       this.SSN.Name = "SSN";
       this.SSN.ReadOnly = true;
-      this.SSN.Size = new System.Drawing.Size(86, 20);
+      this.SSN.Size = new System.Drawing.Size(100, 20);
       this.SSN.TabIndex = 39;
       // 
       // label20
       // 
       this.label20.AutoSize = true;
-      this.label20.BackColor = System.Drawing.SystemColors.Info;
+      this.label20.BackColor = System.Drawing.SystemColors.AppWorkspace;
       this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label20.Location = new System.Drawing.Point(610, 377);
+      this.label20.Location = new System.Drawing.Point(610, 326);
       this.label20.Name = "label20";
       this.label20.Size = new System.Drawing.Size(105, 15);
       this.label20.TabIndex = 40;
       this.label20.Text = "Before Pay Hike:";
-      this.label20.Click += new System.EventHandler(this.label20_Click);
       // 
       // label21
       // 
       this.label21.AutoSize = true;
       this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label21.Location = new System.Drawing.Point(142, 339);
+      this.label21.Location = new System.Drawing.Point(28, 318);
       this.label21.Name = "label21";
       this.label21.Size = new System.Drawing.Size(67, 15);
       this.label21.TabIndex = 41;
@@ -507,18 +515,89 @@
       // Password
       // 
       this.Password.BackColor = System.Drawing.SystemColors.Info;
-      this.Password.Location = new System.Drawing.Point(142, 357);
+      this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.Password.Location = new System.Drawing.Point(28, 336);
       this.Password.Name = "Password";
       this.Password.ReadOnly = true;
-      this.Password.Size = new System.Drawing.Size(100, 20);
+      this.Password.Size = new System.Drawing.Size(229, 26);
       this.Password.TabIndex = 42;
+      // 
+      // FindEmployeeByID
+      // 
+      this.FindEmployeeByID.BackColor = System.Drawing.SystemColors.ControlLight;
+      this.FindEmployeeByID.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+      this.FindEmployeeByID.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+      this.FindEmployeeByID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.FindEmployeeByID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FindEmployeeByID.ForeColor = System.Drawing.SystemColors.ControlText;
+      this.FindEmployeeByID.Location = new System.Drawing.Point(133, 7);
+      this.FindEmployeeByID.Name = "FindEmployeeByID";
+      this.FindEmployeeByID.Size = new System.Drawing.Size(154, 23);
+      this.FindEmployeeByID.TabIndex = 43;
+      this.FindEmployeeByID.Text = "Find Employee By ID";
+      this.FindEmployeeByID.UseVisualStyleBackColor = false;
+      this.FindEmployeeByID.Click += new System.EventHandler(this.FindEmployeeByID_Click);
+      // 
+      // FindEmployeeByLastName
+      // 
+      this.FindEmployeeByLastName.BackColor = System.Drawing.SystemColors.ControlLight;
+      this.FindEmployeeByLastName.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+      this.FindEmployeeByLastName.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+      this.FindEmployeeByLastName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.FindEmployeeByLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FindEmployeeByLastName.Location = new System.Drawing.Point(426, 7);
+      this.FindEmployeeByLastName.Name = "FindEmployeeByLastName";
+      this.FindEmployeeByLastName.Size = new System.Drawing.Size(127, 23);
+      this.FindEmployeeByLastName.TabIndex = 44;
+      this.FindEmployeeByLastName.Text = "Find By Last Name";
+      this.FindEmployeeByLastName.UseVisualStyleBackColor = false;
+      this.FindEmployeeByLastName.Click += new System.EventHandler(this.FindEmployeeByLastName_Click);
+      // 
+      // FindEmployeeByFirstName
+      // 
+      this.FindEmployeeByFirstName.BackColor = System.Drawing.SystemColors.ControlLight;
+      this.FindEmployeeByFirstName.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+      this.FindEmployeeByFirstName.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+      this.FindEmployeeByFirstName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.FindEmployeeByFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FindEmployeeByFirstName.Location = new System.Drawing.Point(293, 7);
+      this.FindEmployeeByFirstName.Name = "FindEmployeeByFirstName";
+      this.FindEmployeeByFirstName.Size = new System.Drawing.Size(127, 23);
+      this.FindEmployeeByFirstName.TabIndex = 45;
+      this.FindEmployeeByFirstName.Text = "Find By First Name";
+      this.FindEmployeeByFirstName.UseVisualStyleBackColor = false;
+      this.FindEmployeeByFirstName.Click += new System.EventHandler(this.FindEmployeeByFirstName_Click);
+      // 
+      // Cancel
+      // 
+      this.Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+      this.Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+      this.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+      this.Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+      this.Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+      this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+      this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.Cancel.Location = new System.Drawing.Point(31, 428);
+      this.Cancel.Name = "Cancel";
+      this.Cancel.Size = new System.Drawing.Size(59, 23);
+      this.Cancel.TabIndex = 46;
+      this.Cancel.Text = "Cancel";
+      this.Cancel.UseVisualStyleBackColor = true;
+      this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
       // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackColor = System.Drawing.SystemColors.ControlLight;
+      this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+      this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+      this.CancelButton = this.Cancel;
       this.ClientSize = new System.Drawing.Size(809, 463);
+      this.Controls.Add(this.Cancel);
+      this.Controls.Add(this.FindEmployeeByFirstName);
+      this.Controls.Add(this.FindEmployeeByLastName);
+      this.Controls.Add(this.FindEmployeeByID);
       this.Controls.Add(this.Password);
       this.Controls.Add(this.label21);
       this.Controls.Add(this.label20);
@@ -561,9 +640,11 @@
       this.Controls.Add(this.NamePrefix);
       this.Controls.Add(this.label1);
       this.Controls.Add(this.ID);
+      this.Cursor = System.Windows.Forms.Cursors.Arrow;
       this.Name = "Form1";
       this.Text = "Form1";
       this.Load += new System.EventHandler(this.Form1_Load);
+      this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -613,6 +694,10 @@
     private System.Windows.Forms.Label label21;
     private System.Windows.Forms.TextBox Password;
     private System.Windows.Forms.MaskedTextBox DrugTestDateLast;
+    private System.Windows.Forms.Button FindEmployeeByID;
+    private System.Windows.Forms.Button FindEmployeeByLastName;
+    private System.Windows.Forms.Button FindEmployeeByFirstName;
+    private System.Windows.Forms.Button Cancel;
   }
 }
 

@@ -107,6 +107,74 @@ namespace FirstGUIProject
       UserName.Text = emp.UserName;
       Password.Text = emp.Password;
     }
+    private void FindEmployeeByLastName_Click(object sender, EventArgs e)
+    {
+      Employee emp = new Employee();
+      
+      foreach (KeyValuePair<string, Employee> entry in employeeInfoData)
+      {
+        if (entry.Value.LastName == LastName.Text)
+        {
+          emp = entry.Value;
+
+          ID.Text = entry.Key;
+          NamePrefix.Text = emp.NamePrefix;
+          FirstName.Text = emp.FirstName;
+          MiddleInitial.Text = emp.MiddleInitial;
+          LastName.Text = emp.LastName;
+          Gender.Text = emp.Gender;
+          DrugTestDateLast.Text = Convert.ToString(emp.DrugTestDateLast);
+          EMail.Text = emp.EMail;
+          DateOfBirth.Text = Convert.ToString(emp.DateOfBirth);
+          DateHired.Text = Convert.ToString(emp.DateHired);
+          Salary.Text = Convert.ToString(emp.Salary);
+          LastPayHike.Text = Convert.ToString(emp.LastPayHike);
+          SSN.Text = emp.SSN;
+          PhoneNumber.Text = emp.PhoneNumber;
+          County.Text = emp.County;
+          City.Text = emp.City;
+          State.Text = emp.State;
+          ZipCode.Text = emp.ZipCode;
+          UserName.Text = emp.UserName;
+          Password.Text = emp.Password;
+          return;
+        }
+      }
+    }
+    private void FindEmployeeByFirstName_Click(object sender, EventArgs e)
+    {
+      Employee emp = new Employee();
+
+      foreach (KeyValuePair<string, Employee> entry in employeeInfoData)
+      {
+        if (entry.Value.FirstName == FirstName.Text)
+        {
+          emp = entry.Value;
+
+          ID.Text = entry.Key;
+          NamePrefix.Text = emp.NamePrefix;
+          FirstName.Text = emp.FirstName;
+          MiddleInitial.Text = emp.MiddleInitial;
+          LastName.Text = emp.LastName;
+          Gender.Text = emp.Gender;
+          DrugTestDateLast.Text = Convert.ToString(emp.DrugTestDateLast);
+          EMail.Text = emp.EMail;
+          DateOfBirth.Text = Convert.ToString(emp.DateOfBirth);
+          DateHired.Text = Convert.ToString(emp.DateHired);
+          Salary.Text = Convert.ToString(emp.Salary);
+          LastPayHike.Text = Convert.ToString(emp.LastPayHike);
+          SSN.Text = emp.SSN;
+          PhoneNumber.Text = emp.PhoneNumber;
+          County.Text = emp.County;
+          City.Text = emp.City;
+          State.Text = emp.State;
+          ZipCode.Text = emp.ZipCode;
+          UserName.Text = emp.UserName;
+          Password.Text = emp.Password;
+          return;
+        }
+      }
+    }
     private void ID_KeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.Enter)
@@ -142,76 +210,6 @@ namespace FirstGUIProject
     private void LastName_MouseClick(object sender, MouseEventArgs e)
     {
       LastName.SelectionStart = 0;
-    }
-
-    private void FindEmployeeByLastName_Click(object sender, EventArgs e)
-    {
-      Employee emp = new Employee();
-      
-      foreach (KeyValuePair<string, Employee> entry in employeeInfoData)
-      {
-        if (entry.Value.LastName == LastName.Text)
-        {
-          emp = entry.Value;
-
-          ID.Text = entry.Key;
-          NamePrefix.Text = emp.NamePrefix;
-          FirstName.Text = emp.FirstName;
-          MiddleInitial.Text = emp.MiddleInitial;
-          LastName.Text = emp.LastName;
-          Gender.Text = emp.Gender;
-          DrugTestDateLast.Text = Convert.ToString(emp.DrugTestDateLast);
-          EMail.Text = emp.EMail;
-          DateOfBirth.Text = Convert.ToString(emp.DateOfBirth);
-          DateHired.Text = Convert.ToString(emp.DateHired);
-          Salary.Text = Convert.ToString(emp.Salary);
-          LastPayHike.Text = Convert.ToString(emp.LastPayHike);
-          SSN.Text = emp.SSN;
-          PhoneNumber.Text = emp.PhoneNumber;
-          County.Text = emp.County;
-          City.Text = emp.City;
-          State.Text = emp.State;
-          ZipCode.Text = emp.ZipCode;
-          UserName.Text = emp.UserName;
-          Password.Text = emp.Password;
-          return;
-        }
-      }
-    }
-
-    private void FindEmployeeByFirstName_Click(object sender, EventArgs e)
-    {
-      Employee emp = new Employee();
-
-      foreach (KeyValuePair<string, Employee> entry in employeeInfoData)
-      {
-        if (entry.Value.FirstName == FirstName.Text)
-        {
-          emp = entry.Value;
-
-          ID.Text = entry.Key;
-          NamePrefix.Text = emp.NamePrefix;
-          FirstName.Text = emp.FirstName;
-          MiddleInitial.Text = emp.MiddleInitial;
-          LastName.Text = emp.LastName;
-          Gender.Text = emp.Gender;
-          DrugTestDateLast.Text = Convert.ToString(emp.DrugTestDateLast);
-          EMail.Text = emp.EMail;
-          DateOfBirth.Text = Convert.ToString(emp.DateOfBirth);
-          DateHired.Text = Convert.ToString(emp.DateHired);
-          Salary.Text = Convert.ToString(emp.Salary);
-          LastPayHike.Text = Convert.ToString(emp.LastPayHike);
-          SSN.Text = emp.SSN;
-          PhoneNumber.Text = emp.PhoneNumber;
-          County.Text = emp.County;
-          City.Text = emp.City;
-          State.Text = emp.State;
-          ZipCode.Text = emp.ZipCode;
-          UserName.Text = emp.UserName;
-          Password.Text = emp.Password;
-          return;
-        }
-      }
     }
 
     private void Form1_KeyDown(object sender, KeyEventArgs e)

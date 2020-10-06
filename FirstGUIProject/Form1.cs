@@ -28,7 +28,7 @@ namespace FirstGUIProject
       var rand = new Random();
 
       StreamReader reader = new StreamReader(@"EmployeeRecords.csv");
-      
+
       Dictionary<string, Employee> employeesEligible = new Dictionary<string, Employee>();
       Dictionary<string, Employee> employeesSelectedForTesting = new Dictionary<string, Employee>();
 
@@ -110,7 +110,7 @@ namespace FirstGUIProject
     private void FindEmployeeByLastName_Click(object sender, EventArgs e)
     {
       Employee emp = new Employee();
-      
+
       foreach (KeyValuePair<string, Employee> entry in employeeInfoData)
       {
         if (entry.Value.LastName == LastName.Text)
@@ -182,7 +182,44 @@ namespace FirstGUIProject
         FindEmployeeByID_Click(this, new EventArgs());
       }
     }
-    
+    private void DateOfBirth_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.Enter)
+      {
+        Employee emp = new Employee();
+
+        foreach (KeyValuePair<string, Employee> entry in employeeInfoData)
+        {
+          if (entry.Value.DateOfBirth == Convert.ToDateTime(DateOfBirth.Text))
+          {
+            emp = entry.Value;
+
+            ID.Text = entry.Key;
+            NamePrefix.Text = emp.NamePrefix;
+            FirstName.Text = emp.FirstName;
+            MiddleInitial.Text = emp.MiddleInitial;
+            LastName.Text = emp.LastName;
+            Gender.Text = emp.Gender;
+            DrugTestDateLast.Text = Convert.ToString(emp.DrugTestDateLast);
+            EMail.Text = emp.EMail;
+            DateOfBirth.Text = Convert.ToString(emp.DateOfBirth);
+            DateHired.Text = Convert.ToString(emp.DateHired);
+            Salary.Text = Convert.ToString(emp.Salary);
+            LastPayHike.Text = Convert.ToString(emp.LastPayHike);
+            SSN.Text = emp.SSN;
+            PhoneNumber.Text = emp.PhoneNumber;
+            County.Text = emp.County;
+            City.Text = emp.City;
+            State.Text = emp.State;
+            ZipCode.Text = emp.ZipCode;
+            UserName.Text = emp.UserName;
+            Password.Text = emp.Password;
+            return;
+          }
+        }
+      }
+    }
+
     private void FirstName_KeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.Enter)
@@ -202,9 +239,47 @@ namespace FirstGUIProject
       ID.SelectionStart = 0;
     }
 
+    private void btnAddEmployee_MouseClick(object sender, MouseEventArgs e)
+    {
+      Employee emp = new Employee();
+
+
+      if (!employeeInfoData.ContainsKey(ID.Text))
+      {
+        emp.ID = ID.Text;
+        emp.NamePrefix = NamePrefix.Text;
+        emp.FirstName = FirstName.Text;
+        emp.MiddleInitial = MiddleInitial.Text;
+        emp.LastName = LastName.Text;
+        emp.Gender = Gender.Text;
+        emp.DrugTestDateLast = Convert.ToDateTime(DrugTestDateLast.Text);
+        emp.EMail = EMail.Text;
+        emp.DateOfBirth = Convert.ToDateTime(DateOfBirth.Text);
+        emp.DateHired = Convert.ToDateTime(DateHired.Text);
+        emp.Salary = Convert.ToDecimal(Salary.Text);
+        emp.LastPayHike = Convert.ToDecimal(LastPayHike.Text);
+        emp.SSN = SSN.Text;
+        emp.PhoneNumber = PhoneNumber.Text;
+        emp.County = County.Text;
+        emp.City = City.Text;
+        emp.State = State.Text;
+        emp.ZipCode = ZipCode.Text;
+        emp.UserName = UserName.Text;
+        emp.Password = Password.Text;
+
+        employeeInfoData.Add(emp.ID, emp);
+        //return;
+        //TODO: text here
+
+      }
+    }
     private void FirstName_MouseClick(object sender, MouseEventArgs e)
     {
       FirstName.SelectionStart = 0;
+    }
+    private void DateOfBirth_MouseClick(object sender, MouseEventArgs e)
+    {
+      DateOfBirth.SelectionStart = 0;
     }
 
     private void LastName_MouseClick(object sender, MouseEventArgs e)
@@ -219,6 +294,7 @@ namespace FirstGUIProject
         this.Close();
       }
     }
+
 
   }
 }

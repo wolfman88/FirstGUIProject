@@ -74,6 +74,8 @@
       this.FindEmployeeByLastName = new System.Windows.Forms.Button();
       this.FindEmployeeByFirstName = new System.Windows.Forms.Button();
       this.Cancel = new System.Windows.Forms.Button();
+      this.btnAddEmployee = new System.Windows.Forms.Button();
+      this.comboBox1 = new System.Windows.Forms.ComboBox();
       this.SuspendLayout();
       // 
       // ID
@@ -98,7 +100,7 @@
       this.label1.Location = new System.Drawing.Point(28, 12);
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(80, 15);
-      this.label1.TabIndex = 2;
+      this.label1.TabIndex = 99;
       this.label1.Text = "Employee ID";
       // 
       // NamePrefix
@@ -106,9 +108,8 @@
       this.NamePrefix.BackColor = System.Drawing.SystemColors.Info;
       this.NamePrefix.Location = new System.Drawing.Point(28, 77);
       this.NamePrefix.Name = "NamePrefix";
-      this.NamePrefix.ReadOnly = true;
       this.NamePrefix.Size = new System.Drawing.Size(45, 20);
-      this.NamePrefix.TabIndex = 3;
+      this.NamePrefix.TabIndex = 2;
       // 
       // label2
       // 
@@ -118,7 +119,7 @@
       this.label2.Location = new System.Drawing.Point(28, 59);
       this.label2.Name = "label2";
       this.label2.Size = new System.Drawing.Size(45, 15);
-      this.label2.TabIndex = 4;
+      this.label2.TabIndex = 71;
       this.label2.Text = "Prefix:";
       // 
       // FirstName
@@ -127,7 +128,7 @@
       this.FirstName.Location = new System.Drawing.Point(99, 77);
       this.FirstName.Name = "FirstName";
       this.FirstName.Size = new System.Drawing.Size(100, 20);
-      this.FirstName.TabIndex = 5;
+      this.FirstName.TabIndex = 3;
       this.FirstName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.FirstName_MouseClick);
       this.FirstName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FirstName_KeyDown);
       // 
@@ -137,9 +138,8 @@
       this.MiddleInitial.Location = new System.Drawing.Point(215, 77);
       this.MiddleInitial.MaxLength = 1;
       this.MiddleInitial.Name = "MiddleInitial";
-      this.MiddleInitial.ReadOnly = true;
       this.MiddleInitial.Size = new System.Drawing.Size(27, 20);
-      this.MiddleInitial.TabIndex = 6;
+      this.MiddleInitial.TabIndex = 4;
       this.MiddleInitial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // LastName
@@ -148,7 +148,7 @@
       this.LastName.Location = new System.Drawing.Point(258, 77);
       this.LastName.Name = "LastName";
       this.LastName.Size = new System.Drawing.Size(100, 20);
-      this.LastName.TabIndex = 7;
+      this.LastName.TabIndex = 5;
       this.LastName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LastName_MouseClick);
       this.LastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LastName_KeyDown);
       // 
@@ -160,7 +160,7 @@
       this.label3.Location = new System.Drawing.Point(99, 59);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(73, 15);
-      this.label3.TabIndex = 8;
+      this.label3.TabIndex = 363;
       this.label3.Text = "First Name:";
       // 
       // label4
@@ -171,7 +171,7 @@
       this.label4.Location = new System.Drawing.Point(215, 59);
       this.label4.Name = "label4";
       this.label4.Size = new System.Drawing.Size(27, 15);
-      this.label4.TabIndex = 9;
+      this.label4.TabIndex = 66;
       this.label4.Text = "MI:";
       // 
       // label5
@@ -182,7 +182,7 @@
       this.label5.Location = new System.Drawing.Point(258, 59);
       this.label5.Name = "label5";
       this.label5.Size = new System.Drawing.Size(73, 15);
-      this.label5.TabIndex = 10;
+      this.label5.TabIndex = 73;
       this.label5.Text = "Last Name:";
       // 
       // Gender
@@ -190,9 +190,8 @@
       this.Gender.BackColor = System.Drawing.SystemColors.Info;
       this.Gender.Location = new System.Drawing.Point(395, 77);
       this.Gender.Name = "Gender";
-      this.Gender.ReadOnly = true;
       this.Gender.Size = new System.Drawing.Size(24, 20);
-      this.Gender.TabIndex = 11;
+      this.Gender.TabIndex = 6;
       this.Gender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // label6
@@ -203,18 +202,17 @@
       this.label6.Location = new System.Drawing.Point(380, 59);
       this.label6.Name = "label6";
       this.label6.Size = new System.Drawing.Size(54, 15);
-      this.label6.TabIndex = 12;
+      this.label6.TabIndex = 78;
       this.label6.Text = "Gender:";
       // 
       // DrugTestDateLast
       // 
       this.DrugTestDateLast.BackColor = System.Drawing.SystemColors.Info;
-      this.DrugTestDateLast.Location = new System.Drawing.Point(610, 77);
+      this.DrugTestDateLast.Location = new System.Drawing.Point(641, 77);
       this.DrugTestDateLast.Mask = "00/00/0000";
       this.DrugTestDateLast.Name = "DrugTestDateLast";
-      this.DrugTestDateLast.ReadOnly = true;
-      this.DrugTestDateLast.Size = new System.Drawing.Size(142, 20);
-      this.DrugTestDateLast.TabIndex = 13;
+      this.DrugTestDateLast.Size = new System.Drawing.Size(91, 20);
+      this.DrugTestDateLast.TabIndex = 8;
       this.DrugTestDateLast.ValidatingType = typeof(System.DateTime);
       // 
       // label7
@@ -225,7 +223,7 @@
       this.label7.Location = new System.Drawing.Point(610, 59);
       this.label7.Name = "label7";
       this.label7.Size = new System.Drawing.Size(142, 15);
-      this.label7.TabIndex = 14;
+      this.label7.TabIndex = 96;
       this.label7.Text = "Date Last Drug Tested:";
       // 
       // EMail
@@ -233,9 +231,8 @@
       this.EMail.BackColor = System.Drawing.SystemColors.Info;
       this.EMail.Location = new System.Drawing.Point(28, 133);
       this.EMail.Name = "EMail";
-      this.EMail.ReadOnly = true;
       this.EMail.Size = new System.Drawing.Size(193, 20);
-      this.EMail.TabIndex = 15;
+      this.EMail.TabIndex = 9;
       // 
       // DateOfBirth
       // 
@@ -243,26 +240,25 @@
       this.DateOfBirth.Location = new System.Drawing.Point(456, 77);
       this.DateOfBirth.Mask = "00/00/0000";
       this.DateOfBirth.Name = "DateOfBirth";
-      this.DateOfBirth.ReadOnly = true;
       this.DateOfBirth.Size = new System.Drawing.Size(100, 20);
-      this.DateOfBirth.TabIndex = 16;
+      this.DateOfBirth.TabIndex = 7;
       this.DateOfBirth.ValidatingType = typeof(System.DateTime);
+      this.DateOfBirth.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DateOfBirth_MouseClick);
+      this.DateOfBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DateOfBirth_KeyDown);
       // 
       // State
       // 
       this.State.BackColor = System.Drawing.SystemColors.Info;
       this.State.Location = new System.Drawing.Point(178, 189);
       this.State.Name = "State";
-      this.State.ReadOnly = true;
       this.State.Size = new System.Drawing.Size(100, 20);
-      this.State.TabIndex = 17;
+      this.State.TabIndex = 13;
       // 
       // PreviousSalary
       // 
       this.PreviousSalary.BackColor = System.Drawing.SystemColors.Info;
       this.PreviousSalary.Location = new System.Drawing.Point(610, 344);
       this.PreviousSalary.Name = "PreviousSalary";
-      this.PreviousSalary.ReadOnly = true;
       this.PreviousSalary.Size = new System.Drawing.Size(100, 20);
       this.PreviousSalary.TabIndex = 18;
       // 
@@ -271,18 +267,16 @@
       this.LastPayHike.BackColor = System.Drawing.SystemColors.Info;
       this.LastPayHike.Location = new System.Drawing.Point(610, 293);
       this.LastPayHike.Name = "LastPayHike";
-      this.LastPayHike.ReadOnly = true;
       this.LastPayHike.Size = new System.Drawing.Size(100, 20);
-      this.LastPayHike.TabIndex = 19;
+      this.LastPayHike.TabIndex = 18;
       // 
       // Salary
       // 
       this.Salary.BackColor = System.Drawing.SystemColors.Info;
       this.Salary.Location = new System.Drawing.Point(610, 243);
       this.Salary.Name = "Salary";
-      this.Salary.ReadOnly = true;
       this.Salary.Size = new System.Drawing.Size(100, 20);
-      this.Salary.TabIndex = 20;
+      this.Salary.TabIndex = 17;
       // 
       // DateHired
       // 
@@ -290,9 +284,8 @@
       this.DateHired.Location = new System.Drawing.Point(456, 133);
       this.DateHired.Mask = "00/00/0000";
       this.DateHired.Name = "DateHired";
-      this.DateHired.ReadOnly = true;
       this.DateHired.Size = new System.Drawing.Size(100, 20);
-      this.DateHired.TabIndex = 21;
+      this.DateHired.TabIndex = 11;
       this.DateHired.ValidatingType = typeof(System.DateTime);
       // 
       // UserName
@@ -301,9 +294,8 @@
       this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.UserName.Location = new System.Drawing.Point(28, 273);
       this.UserName.Name = "UserName";
-      this.UserName.ReadOnly = true;
       this.UserName.Size = new System.Drawing.Size(229, 26);
-      this.UserName.TabIndex = 22;
+      this.UserName.TabIndex = 19;
       // 
       // ZipCode
       // 
@@ -311,9 +303,8 @@
       this.ZipCode.Location = new System.Drawing.Point(528, 189);
       this.ZipCode.Mask = "00000";
       this.ZipCode.Name = "ZipCode";
-      this.ZipCode.ReadOnly = true;
       this.ZipCode.Size = new System.Drawing.Size(61, 20);
-      this.ZipCode.TabIndex = 23;
+      this.ZipCode.TabIndex = 16;
       this.ZipCode.ValidatingType = typeof(int);
       // 
       // City
@@ -321,9 +312,8 @@
       this.City.BackColor = System.Drawing.SystemColors.Info;
       this.City.Location = new System.Drawing.Point(412, 189);
       this.City.Name = "City";
-      this.City.ReadOnly = true;
       this.City.Size = new System.Drawing.Size(100, 20);
-      this.City.TabIndex = 24;
+      this.City.TabIndex = 15;
       // 
       // PhoneNumber
       // 
@@ -331,18 +321,16 @@
       this.PhoneNumber.Location = new System.Drawing.Point(28, 189);
       this.PhoneNumber.Mask = "(999) 000-0000";
       this.PhoneNumber.Name = "PhoneNumber";
-      this.PhoneNumber.ReadOnly = true;
       this.PhoneNumber.Size = new System.Drawing.Size(119, 20);
-      this.PhoneNumber.TabIndex = 25;
+      this.PhoneNumber.TabIndex = 12;
       // 
       // County
       // 
       this.County.BackColor = System.Drawing.SystemColors.Info;
       this.County.Location = new System.Drawing.Point(296, 189);
       this.County.Name = "County";
-      this.County.ReadOnly = true;
       this.County.Size = new System.Drawing.Size(100, 20);
-      this.County.TabIndex = 26;
+      this.County.TabIndex = 14;
       // 
       // label8
       // 
@@ -485,9 +473,8 @@
       this.SSN.Location = new System.Drawing.Point(258, 133);
       this.SSN.Mask = "000-00-0000";
       this.SSN.Name = "SSN";
-      this.SSN.ReadOnly = true;
       this.SSN.Size = new System.Drawing.Size(100, 20);
-      this.SSN.TabIndex = 39;
+      this.SSN.TabIndex = 10;
       // 
       // label20
       // 
@@ -518,9 +505,8 @@
       this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.Password.Location = new System.Drawing.Point(28, 336);
       this.Password.Name = "Password";
-      this.Password.ReadOnly = true;
       this.Password.Size = new System.Drawing.Size(229, 26);
-      this.Password.TabIndex = 42;
+      this.Password.TabIndex = 20;
       // 
       // FindEmployeeByID
       // 
@@ -581,10 +567,29 @@
       this.Cancel.Location = new System.Drawing.Point(31, 428);
       this.Cancel.Name = "Cancel";
       this.Cancel.Size = new System.Drawing.Size(59, 23);
-      this.Cancel.TabIndex = 46;
+      this.Cancel.TabIndex = 22;
       this.Cancel.Text = "Cancel";
       this.Cancel.UseVisualStyleBackColor = true;
       this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+      // 
+      // btnAddEmployee
+      // 
+      this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.btnAddEmployee.Location = new System.Drawing.Point(387, 293);
+      this.btnAddEmployee.Name = "btnAddEmployee";
+      this.btnAddEmployee.Size = new System.Drawing.Size(109, 50);
+      this.btnAddEmployee.TabIndex = 21;
+      this.btnAddEmployee.Text = "Add Employee";
+      this.btnAddEmployee.UseVisualStyleBackColor = true;
+      this.btnAddEmployee.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddEmployee_MouseClick);
+      // 
+      // comboBox1
+      // 
+      this.comboBox1.FormattingEnabled = true;
+      this.comboBox1.Location = new System.Drawing.Point(323, 376);
+      this.comboBox1.Name = "comboBox1";
+      this.comboBox1.Size = new System.Drawing.Size(188, 21);
+      this.comboBox1.TabIndex = 364;
       // 
       // Form1
       // 
@@ -594,6 +599,8 @@
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
       this.CancelButton = this.Cancel;
       this.ClientSize = new System.Drawing.Size(809, 463);
+      this.Controls.Add(this.comboBox1);
+      this.Controls.Add(this.btnAddEmployee);
       this.Controls.Add(this.Cancel);
       this.Controls.Add(this.FindEmployeeByFirstName);
       this.Controls.Add(this.FindEmployeeByLastName);
@@ -698,6 +705,8 @@
     private System.Windows.Forms.Button FindEmployeeByLastName;
     private System.Windows.Forms.Button FindEmployeeByFirstName;
     private System.Windows.Forms.Button Cancel;
+    private System.Windows.Forms.Button btnAddEmployee;
+    private System.Windows.Forms.ComboBox comboBox1;
   }
 }
 

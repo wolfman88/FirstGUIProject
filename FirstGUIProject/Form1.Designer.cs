@@ -76,6 +76,7 @@
       this.Cancel = new System.Windows.Forms.Button();
       this.btnAddEmployee = new System.Windows.Forms.Button();
       this.comboBox1 = new System.Windows.Forms.ComboBox();
+      this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
       this.SuspendLayout();
       // 
       // ID
@@ -591,6 +592,14 @@
       this.comboBox1.Size = new System.Drawing.Size(188, 21);
       this.comboBox1.TabIndex = 364;
       // 
+      // dateTimePicker1
+      // 
+      this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+      this.dateTimePicker1.Location = new System.Drawing.Point(456, 92);
+      this.dateTimePicker1.Name = "dateTimePicker1";
+      this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
+      this.dateTimePicker1.TabIndex = 365;
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,6 +608,7 @@
       this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
       this.CancelButton = this.Cancel;
       this.ClientSize = new System.Drawing.Size(809, 463);
+      this.Controls.Add(this.dateTimePicker1);
       this.Controls.Add(this.comboBox1);
       this.Controls.Add(this.btnAddEmployee);
       this.Controls.Add(this.Cancel);
@@ -707,6 +717,7 @@
     private System.Windows.Forms.Button Cancel;
     private System.Windows.Forms.Button btnAddEmployee;
     private System.Windows.Forms.ComboBox comboBox1;
+    private System.Windows.Forms.DateTimePicker dateTimePicker1;
   }
 }
 

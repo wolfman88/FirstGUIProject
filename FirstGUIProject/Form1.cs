@@ -14,6 +14,7 @@ namespace FirstGUIProject
   public partial class Form1 : Form
   {
     Dictionary<string, Employee> employeeInfoData = new Dictionary<string, Employee>();
+
     public Form1()
     {
       InitializeComponent();
@@ -22,7 +23,7 @@ namespace FirstGUIProject
     private void Form1_Load(object sender, EventArgs e)
     {
       string line = "";
-      int selection = 1;
+      //int selection = 1;
       int numDayTestLimit = -180;
       DateTime dateTestLimit = DateTime.Today.AddDays(numDayTestLimit);
       var rand = new Random();
@@ -72,10 +73,12 @@ namespace FirstGUIProject
         }
       }
     }
+
     private void Cancel_Click(object sender, EventArgs e)
     {
       Close();
     }
+
     private void FindEmployeeByID_Click(object sender, EventArgs e)
     {
       Employee emp = new Employee();
@@ -107,6 +110,7 @@ namespace FirstGUIProject
       UserName.Text = emp.UserName;
       Password.Text = emp.Password;
     }
+
     private void FindEmployeeByLastName_Click(object sender, EventArgs e)
     {
       Employee emp = new Employee();
@@ -141,6 +145,7 @@ namespace FirstGUIProject
         }
       }
     }
+
     private void FindEmployeeByFirstName_Click(object sender, EventArgs e)
     {
       Employee emp = new Employee();
@@ -175,6 +180,7 @@ namespace FirstGUIProject
         }
       }
     }
+
     private void ID_KeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.Enter)
@@ -182,6 +188,7 @@ namespace FirstGUIProject
         FindEmployeeByID_Click(this, new EventArgs());
       }
     }
+
     private void DateOfBirth_KeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.Enter)
@@ -202,7 +209,9 @@ namespace FirstGUIProject
             Gender.Text = emp.Gender;
             DrugTestDateLast.Text = Convert.ToString(emp.DrugTestDateLast);
             EMail.Text = emp.EMail;
-            DateOfBirth.Text = Convert.ToString(emp.DateOfBirth);
+            string formattedBirthdate = emp.DateOfBirth.ToShortDateString().PadLeft(10, '0');
+            //DateOfBirth.Text = string.Format("{0:MM/dd/yyyy}",emp.DateOfBirth.ToShortDateString());
+            DateOfBirth.Text = formattedBirthdate;
             DateHired.Text = Convert.ToString(emp.DateHired);
             Salary.Text = Convert.ToString(emp.Salary);
             LastPayHike.Text = Convert.ToString(emp.LastPayHike);
@@ -227,6 +236,7 @@ namespace FirstGUIProject
         FindEmployeeByFirstName_Click(this, new EventArgs());
       }
     }
+
     private void LastName_KeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.Enter)
@@ -234,6 +244,7 @@ namespace FirstGUIProject
         FindEmployeeByLastName_Click(this, new EventArgs());
       }
     }
+
     private void ID_MouseClick(object sender, MouseEventArgs e)
     {
       ID.SelectionStart = 0;
@@ -273,13 +284,15 @@ namespace FirstGUIProject
 
       }
     }
+
     private void FirstName_MouseClick(object sender, MouseEventArgs e)
     {
       FirstName.SelectionStart = 0;
     }
+
     private void DateOfBirth_MouseClick(object sender, MouseEventArgs e)
     {
-      DateOfBirth.SelectionStart = 0;
+      //DateOfBirth.SelectionStart = 0;
     }
 
     private void LastName_MouseClick(object sender, MouseEventArgs e)
@@ -294,7 +307,6 @@ namespace FirstGUIProject
         this.Close();
       }
     }
-
 
   }
 }

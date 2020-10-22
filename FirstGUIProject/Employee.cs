@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstGUIProject
 {
-  class Employee
+  public class Employee
   {
     public Employee()
     {

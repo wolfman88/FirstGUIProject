@@ -75,7 +75,6 @@
       this.FindEmployeeByFirstName = new System.Windows.Forms.Button();
       this.Cancel = new System.Windows.Forms.Button();
       this.btnAddEmployee = new System.Windows.Forms.Button();
-      this.comboBox1 = new System.Windows.Forms.ComboBox();
       this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
       this.SuspendLayout();
       // 
@@ -209,7 +208,7 @@
       // DrugTestDateLast
       // 
       this.DrugTestDateLast.BackColor = System.Drawing.SystemColors.Info;
-      this.DrugTestDateLast.Location = new System.Drawing.Point(641, 77);
+      this.DrugTestDateLast.Location = new System.Drawing.Point(635, 56);
       this.DrugTestDateLast.Mask = "00/00/0000";
       this.DrugTestDateLast.Name = "DrugTestDateLast";
       this.DrugTestDateLast.Size = new System.Drawing.Size(91, 20);
@@ -221,7 +220,7 @@
       this.label7.AutoSize = true;
       this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label7.Location = new System.Drawing.Point(610, 59);
+      this.label7.Location = new System.Drawing.Point(604, 38);
       this.label7.Name = "label7";
       this.label7.Size = new System.Drawing.Size(142, 15);
       this.label7.TabIndex = 96;
@@ -258,7 +257,7 @@
       // PreviousSalary
       // 
       this.PreviousSalary.BackColor = System.Drawing.SystemColors.Info;
-      this.PreviousSalary.Location = new System.Drawing.Point(610, 344);
+      this.PreviousSalary.Location = new System.Drawing.Point(635, 211);
       this.PreviousSalary.Name = "PreviousSalary";
       this.PreviousSalary.Size = new System.Drawing.Size(100, 20);
       this.PreviousSalary.TabIndex = 18;
@@ -266,7 +265,7 @@
       // LastPayHike
       // 
       this.LastPayHike.BackColor = System.Drawing.SystemColors.Info;
-      this.LastPayHike.Location = new System.Drawing.Point(610, 293);
+      this.LastPayHike.Location = new System.Drawing.Point(635, 160);
       this.LastPayHike.Name = "LastPayHike";
       this.LastPayHike.Size = new System.Drawing.Size(100, 20);
       this.LastPayHike.TabIndex = 18;
@@ -274,7 +273,7 @@
       // Salary
       // 
       this.Salary.BackColor = System.Drawing.SystemColors.Info;
-      this.Salary.Location = new System.Drawing.Point(610, 243);
+      this.Salary.Location = new System.Drawing.Point(635, 110);
       this.Salary.Name = "Salary";
       this.Salary.Size = new System.Drawing.Size(100, 20);
       this.Salary.TabIndex = 17;
@@ -406,7 +405,7 @@
       this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
       this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label14.Location = new System.Drawing.Point(610, 225);
+      this.label14.Location = new System.Drawing.Point(635, 92);
       this.label14.Name = "label14";
       this.label14.Size = new System.Drawing.Size(48, 15);
       this.label14.TabIndex = 33;
@@ -418,7 +417,7 @@
       this.label15.BackColor = System.Drawing.SystemColors.AppWorkspace;
       this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label15.Location = new System.Drawing.Point(610, 275);
+      this.label15.Location = new System.Drawing.Point(635, 142);
       this.label15.Name = "label15";
       this.label15.Size = new System.Drawing.Size(92, 15);
       this.label15.TabIndex = 34;
@@ -483,7 +482,7 @@
       this.label20.BackColor = System.Drawing.SystemColors.AppWorkspace;
       this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
       this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.label20.Location = new System.Drawing.Point(610, 326);
+      this.label20.Location = new System.Drawing.Point(635, 193);
       this.label20.Name = "label20";
       this.label20.Size = new System.Drawing.Size(105, 15);
       this.label20.TabIndex = 40;
@@ -576,21 +575,13 @@
       // btnAddEmployee
       // 
       this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.btnAddEmployee.Location = new System.Drawing.Point(387, 293);
+      this.btnAddEmployee.Location = new System.Drawing.Point(28, 368);
       this.btnAddEmployee.Name = "btnAddEmployee";
       this.btnAddEmployee.Size = new System.Drawing.Size(109, 50);
       this.btnAddEmployee.TabIndex = 21;
       this.btnAddEmployee.Text = "Add Employee";
       this.btnAddEmployee.UseVisualStyleBackColor = true;
       this.btnAddEmployee.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddEmployee_MouseClick);
-      // 
-      // comboBox1
-      // 
-      this.comboBox1.FormattingEnabled = true;
-      this.comboBox1.Location = new System.Drawing.Point(323, 376);
-      this.comboBox1.Name = "comboBox1";
-      this.comboBox1.Size = new System.Drawing.Size(188, 21);
-      this.comboBox1.TabIndex = 364;
       // 
       // dateTimePicker1
       // 
@@ -609,7 +600,6 @@
       this.CancelButton = this.Cancel;
       this.ClientSize = new System.Drawing.Size(809, 463);
       this.Controls.Add(this.dateTimePicker1);
-      this.Controls.Add(this.comboBox1);
       this.Controls.Add(this.btnAddEmployee);
       this.Controls.Add(this.Cancel);
       this.Controls.Add(this.FindEmployeeByFirstName);
@@ -716,7 +706,6 @@
     private System.Windows.Forms.Button FindEmployeeByFirstName;
     private System.Windows.Forms.Button Cancel;
     private System.Windows.Forms.Button btnAddEmployee;
-    private System.Windows.Forms.ComboBox comboBox1;
     private System.Windows.Forms.DateTimePicker dateTimePicker1;
   }
 }
